@@ -1,0 +1,126 @@
+$messageColor: #5baaff;
+
+.chat {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    border-right: 3px solid black;
+}
+
+.settings-panel {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: white;
+    background-color: rgb(68, 68, 68);
+}
+
+.invite-text {
+    word-wrap: break-word;
+    white-space: pre-line;
+}
+
+.message-list {
+    flex-basis: 100%;
+    margin-bottom: 0;
+    padding: 1%;
+    overflow-y: auto;
+
+    &__item {
+        position: relative;
+        display: flex;
+        justify-items: start;
+        align-items: flex-end;
+        padding: 10px 0;
+        list-style-type: none;
+
+        &_my {
+            justify-items: end;
+            flex-direction: row-reverse;
+        }
+
+        &_selected {
+            background-color: lighten($messageColor, 20%);
+        }
+    }
+
+    &__sender-avatar {
+        width: 37px;
+        height: 37px;
+        margin-right: 10px;
+        margin-left: 10px;
+        border-radius: 50%;
+    }
+}
+
+.message {
+    position: relative;
+    padding: 5px 15px;
+    border-radius: .4em;
+    word-wrap: break-word;
+    white-space: pre-line;
+	background: $messageColor;
+    color: white;
+
+    &__text {
+        margin:0;
+    }
+    
+    &_not-my:after {
+        content: '';
+        width: 0;
+        border: 15px solid transparent;
+        border-bottom-color: $messageColor;
+        border-top: 0;
+        position: absolute;
+        bottom: 0px;
+        left: -10px;
+    }
+
+    &_my:after {
+        content: '';
+        width: 0;
+        border: 15px solid transparent;
+        border-bottom-color: $messageColor;
+        border-top: 0;
+        position: absolute;
+        bottom: 0px;
+        right: -10px;
+    }
+    
+    &__send-icon {
+        height: 30px;
+        margin-left: 10px;
+    }
+
+}
+
+.message-form {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    background-color: rgb(68, 68, 68);
+
+    &__textarea {
+        padding: 2px;
+    }
+
+    &__send-btn {
+        height: 3em;
+    }
+}
+
+.options-icon {
+    max-width: 30px;
+    max-height: 30px;
+    margin-right: 10px;
+    margin-left: 5px;
+
+    &:hover {
+        cursor: pointer;
+    }
+}

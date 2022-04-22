@@ -1,0 +1,17 @@
+.selected-menu {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 5%;
+    padding-right: 5%;
+    color: white;
+    background-color: #5baaff;
+
+    &__action {
+        margin-right: 20px;
+        cursor: pointer;
+    }
+
+    &__amount {
+        font-weight: bold;
+    }
+}

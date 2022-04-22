@@ -1,0 +1,35 @@
+version: "3"
+services:
+  react-app:
+    image: react-app
+    stdin_open: true
+    ports: 
+      - "3000:3000"
+    networks:
+      - time-chat
+    env_file:
+      - ".env"
+  api-server:
+    image: api-server
+    ports:
+      - "8000:8000"
+    networks:
+      - time-chat
+    depends_on:
+      - mongo
+    env_file:
+      - ".env"
+  mongo:
+    image: mongo:3.6.19-xenial
+    ports:
+      - "27017:27017"
+    networks:
+      - time-chat
+    volumes:
+      - mongo-data:/data/db
+networks:
+  time-chat:
+    driver: bridge
+volumes:
+  mongo-data:
+    driver: local

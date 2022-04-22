@@ -1,0 +1,27 @@
+{
+    "globals": {
+        "process": true
+    },
+    "env" : {
+        "es6": true,
+        "node": true,
+        "browser": true
+    },
+    "parserOptions": {
+        "ecmaVersion": 11
+    },
+    "rules": {
+        "strict": ["error", "global"],
+        "quotes": ["error", "double"],
+        "semi": "error",
+        "indent": ["error", 4, { "SwitchCase": 1 }],
+        "prefer-const": "error",
+        "no-unused-vars": ["error", { "vars": "all", "args": "after-used" }],
+        "no-undefined": "error",
+        "no-undef": "error",
+        "eqeqeq": "error",
+        "no-var": "error",
+        "max-depth": ["warn", 3],
+        "max-nested-callbacks": ["warn", 3]
+    }
+}

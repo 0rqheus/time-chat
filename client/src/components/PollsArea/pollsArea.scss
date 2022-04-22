@@ -1,0 +1,66 @@
+.polls-area {
+    width: 50%;
+    height: 100%;
+    font-size: 18px;
+}
+
+.polls {
+    height: 89vh;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+.poll {
+    margin-bottom: 100px;
+}
+
+.custom-details {
+    border-top: 1px solid rgb(199, 199, 199);
+    border-bottom: 1px solid rgb(199, 199, 199);
+
+    &__title {
+        height: 2em;
+    }
+
+    &__form {
+        margin: 2%;
+
+        &-title {
+            text-align: center;
+        }
+    }
+}
+
+.previews {
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+}
+
+.polls-btn {
+    display: block;
+    margin: auto;
+}
+
+.constructor {
+    height: 88.5vh;
+    padding: 3%;
+    overflow-y: auto;
+}
+
+.result {
+    padding: 3%;
+
+    &__list {
+        width: 100%;
+        word-wrap: break-word;
+        white-space: pre-line;
+    }
+
+    &__chart {
+        margin: auto;
+    }
+
+    &_selected {
+        background: lightblue;
+    }
+}
